@@ -4,7 +4,7 @@ MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
 VOLUME /srv 
 ENV TOML "/etc/traefik/traefik.toml" 
  
-COPY bin/* /bin/
+COPY bin /bin
 COPY etc/traefik /etc/traefik
 
 
