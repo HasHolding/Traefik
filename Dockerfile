@@ -1,6 +1,13 @@
 FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
 
+RUN apk update && \
+    apk upgrade && \
+    apk add --update openssl && \
+    apk add ca-certificates && \
+	   update-ca-certificates
+
+
 VOLUME /srv 
 ENV TOML "/etc/traefik/traefik.toml" 
  
