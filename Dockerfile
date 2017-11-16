@@ -10,7 +10,6 @@ RUN apk update && \
 VOLUME /srv 
 COPY bin /bin
 COPY etc/traefik /etc/traefik
-RUN chmod +x /bin/entrypoint.sh
 WORKDIR /bin
 RUN wget https://github.com/containous/traefik/releases/download/${VERSION}/traefik_linux-amd64 -O traefik
 RUN chmod +x /bin/traefik
