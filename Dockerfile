@@ -4,8 +4,12 @@ ARG VERSION=v1.4.4
 RUN apk update && \
     apk upgrade && \
     apk add --update openssl && \
+    apk add --update tzdata && \    
     apk add ca-certificates && \
-	   update-ca-certificates
+	   update-ca-certificates && \
+    cp /usr/share/zoneinfo/Europe/Istanbul /etc/localtime && \
+    echo "Europe/Istanbul" >  /etc/timezone && \
+    apk del tzdata
 
 VOLUME /srv 
 COPY bin /bin
