@@ -1,14 +1,11 @@
 FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
 ARG VERSION=v1.5.2
-RUN apk update && \
-    apk upgrade && \
-    apk add --update openssl && \
-    apk add --update tzdata && \    
-    apk add ca-certificates && \
-	   update-ca-certificates && \
-    cp /usr/share/zoneinfo/Europe/Istanbul /etc/localtime && \
-    echo "Europe/Istanbul" >  /etc/timezone && \
+
+RUN apk add --update --no-cache openssl tar tzdata ca-certificates && \
+       update-ca-certificates && \
+       cp /usr/share/zoneinfo/Europe/Istanbul /etc/localtime && \
+       echo "Europe/Istanbul" >  /etc/timezone && \
     apk del tzdata
 
 VOLUME /srv 
