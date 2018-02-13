@@ -1,6 +1,6 @@
 FROM alpine:latest 
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
-ARG VERSION=v1.5.1
+ARG VERSION=v1.5.2
 RUN apk update && \
     apk upgrade && \
     apk add --update openssl && \
