@@ -1,6 +1,6 @@
 FROM alpine:latest
 MAINTAINER "Levent SAGIROGLU" <LSagiroglu@gmail.com>
-ARG VERSION=v1.5.2
+ARG VERSION=v1.5.3
 ARG TIMEZONE=Europe/Istanbul
 
 RUN apk add --update --no-cache openssl tar tzdata ca-certificates && \
