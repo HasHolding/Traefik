@@ -1,6 +1,6 @@
 FROM hasholding/alpine-base
 LABEL maintainer "Levent SAGIROGLU <LSagiroglu@gmail.com>"
-ARG VERSION=v1.6.2
+ARG VERSION=v1.6.3
 RUN wget --quiet --output-document=/bin/traefik https://github.com/containous/traefik/releases/download/${VERSION}/traefik_linux-amd64 && \
        chmod +x /bin/traefik
 VOLUME /shared
