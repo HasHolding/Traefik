@@ -1,1 +1,2 @@
-# Traefik v1.6.6
+# Traefik
+ v1.6.6
